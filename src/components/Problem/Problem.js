@@ -17,8 +17,8 @@ class Problem extends React.Component {
         <div className="card-body">
           <h5 className="card-title">{problem.name}</h5>
           <p className="card-text">{problem.description}</p>
-          <a href="#" className="card-link Link">See the answer</a>
-          <a href="#" className="card-link Link">See the solution</a>
+          <a className="card-link Link">See the answer</a>
+          <a href={problem.solution} className="card-link Link">See the solution</a>
         </div>
       </div>
     );
