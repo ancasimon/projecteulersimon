@@ -1,3 +1,9 @@
+# Project Euler
+
+## Description
+This site displays my progress through the Project Euler challenge.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
