@@ -17,9 +17,25 @@ class Problem extends React.Component {
         <div className="card-body">
           <h5 className="card-title">{problem.name}</h5>
           <p className="card-text">{problem.description}</p>
-          <a className="card-link Link">See the answer</a>
+          {/* <a className="card-link Link">See the answer</a> */}
+
+          <div class="accordion" id="accordionForAnswer">
+            <div className="card">
+            <div class="card-header" id="answer">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseAnswer" aria-expanded="false" aria-controls="collapseAnswer">
+            See the answer
+            </button>
+          </div>
+
+          <div id="collapseAnswer" class="collapse" aria-labelledby="answer" data-parent="#accordionForAnswer">
+            <div className="card-body">
+              <p>{problem.answer}</p>
+            </div>
+          </div>
+          </div>
           <a href={problem.solution} className="card-link Link">See the solution</a>
         </div>
+      </div>
       </div>
     );
   }
