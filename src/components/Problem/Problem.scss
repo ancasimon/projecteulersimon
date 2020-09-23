@@ -1,0 +1,11 @@
+@import '../../styles//variables';
+
+.Problem {
+  background-color: $lightpink;
+  box-shadow: 5px 10px 10px $darkgrey;
+  border-radius: 20px;
+  margin: 20px;
+  max-width: 300px;
+}
+
+
