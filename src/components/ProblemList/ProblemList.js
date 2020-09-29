@@ -20,7 +20,7 @@ class ProblemList extends React.Component {
 
     return (
     <div className="ProblemList">
-      <h2 className="header">Check Out the List of Challenges and My Solutions</h2>
+      <h2 className="header">Check Out the List of Challenges</h2>
       <div className="container d-flex flex-wrap">
         {buildProblemList}
       </div>

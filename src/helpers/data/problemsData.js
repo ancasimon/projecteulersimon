@@ -5,7 +5,7 @@ const problems = [
     description: 'If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.',
     isResolved: true,
     answer: 'If you pass in 1000 as the parameter in this function, then the sum of all the multiples of 3 and 5 below 1,000 is 233,168.',
-    solution: 'https://github.com/ancasimon/projecteulersimon/blob/problem1Solution/src/components/Solutions/Problem1Solution.js',
+    solution: 'https://github.com/ancasimon/projecteulersimon/blob/master/src/components/Solutions/Problem1Solution.js',
   },
   {
     id: '2',
