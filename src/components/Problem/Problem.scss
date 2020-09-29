@@ -1,11 +1,12 @@
 @import '../../styles//variables';
 
 .Problem {
-  background-color: $lightpink;
-  box-shadow: 5px 10px 10px $darkgrey;
+  background-color: white;
+  box-shadow: 10px 10px 21px $darkgrey;
   border-radius: 20px;
   margin: 20px;
   max-width: 300px;
+  color: black;
 }
 
 
