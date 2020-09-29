@@ -13,13 +13,14 @@ class ProblemList extends React.Component {
 
   render() {
     const { problems } = this.props;
-    const buildProblemList = problems.map((problem) => (
+    const sortedProblems = problems.filter((prob) => prob.isResolved === true).sort((a, b) => a.id - b.id);
+    const buildProblemList = sortedProblems.map((problem) => (
       <Problem key={problem.id} problem={problem} />
     ));
 
     return (
     <div className="ProblemList">
-      <h2 className="header">Check Out the List of Challenges</h2>
+      <h2 className="header">Check Out the List of Challenges and My Solutions</h2>
       <div className="container d-flex flex-wrap">
         {buildProblemList}
       </div>

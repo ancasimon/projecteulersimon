@@ -1,15 +1,27 @@
 import React from 'react';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
+
 import PropTypes from 'prop-types';
+
 import problemShape from '../../helpers/propz/problemShape';
 
 import './Problem.scss';
 
 class Problem extends React.Component {
+  state = {
+    isOpen: false,
+  }
+
+  toggle = () => {
+    this.setState({ isOpen: !this.state.isOpen });
+  }
+
   static propTypes = {
     problem: problemShape.problemShape,
   }
 
   render() {
+    const { isOpen } = this.state;
     const { problem } = this.props;
 
     return (
@@ -17,25 +29,21 @@ class Problem extends React.Component {
         <div className="card-body">
           <h5 className="card-title">{problem.name}</h5>
           <p className="card-text">{problem.description}</p>
-          {/* <a className="card-link Link">See the answer</a> */}
 
-          <div class="accordion" id="accordionForAnswer">
-            <div className="card">
-            <div class="card-header" id="answer">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseAnswer" aria-expanded="false" aria-controls="collapseAnswer">
-            See the answer
-            </button>
+          <div>
+            <Button className="col-sm-6 m-1 mx-auto" color="secondary" onClick={this.toggle} >Answer</Button>
+            <Collapse isOpen={isOpen}>
+              <Card>
+                <CardBody>{problem.answer}</CardBody>
+              </Card>
+            </Collapse>
           </div>
 
-          <div id="collapseAnswer" class="collapse" aria-labelledby="answer" data-parent="#accordionForAnswer">
-            <div className="card-body">
-              <p>{problem.answer}</p>
-            </div>
+          <div>
+            <Button className="col-sm-6 m-1 mx-auto" color="secondary" href={problem.solution} target="_blank">Solution</Button>
           </div>
-          </div>
-          <a href={problem.solution} className="card-link Link">See the solution</a>
+
         </div>
-      </div>
       </div>
     );
   }
